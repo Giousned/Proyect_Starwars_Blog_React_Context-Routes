@@ -2,7 +2,8 @@ import React from "react";
 
 import { useState, useEffect } from "react";
 
-import Card from "../component/Card.jsx";
+import CardPeople from "./CardPeople.jsx";
+
 
 const Characters = () => {
   const [characters, setCharacters] = useState([]);
@@ -16,27 +17,23 @@ const Characters = () => {
   };
 
   const getProperties = () => {
-    characters.map((item, index) => {
+    characters.map((item) => {
       fetch(item.url)
         .then((res) => res.json())
-        .then((data) => setPropertie([...propertie, data.result]))
+        .then((data) => setPropertie(prev => [...prev, data.result]))
         .catch((err) => console.error(err));
     });
   };
 
   useEffect(() => getPeople(), []);
 
-  //   console.log(characters);
-
-  console.log(propertie);
-
-  useEffect(() => getProperties(), []);
+  useEffect(() => getProperties(), [characters]);
 
   return (
-    <div className="relative flex items-center">
-      <div className="card-group d-flex overflow-x-scroll scroll text-nowrap whitespace-nowrap scroll-smooth">
-        {characters.map((item, index) => (
-          <Card key={index} title={item.name} propertie={propertie} />
+    <div className="relative flex items-center d-flex overflow-x-scroll scroll text-nowrap whitespace-nowrap scroll-smooth">
+      <div className="card-group">
+        {propertie.map((item, index) => (
+          <CardPeople key={index} properties={item.properties} />
         ))}
       </div>
     </div>
@@ -45,6 +42,7 @@ const Characters = () => {
 
 export default Characters;
 
-{
-  /* <div className="container text-nowrap overflow-auto card-group d-flex"> */
-}
+
+// <div className="container text-nowrap overflow-auto card-group d-flex">
+
+// overflow-x-scroll scroll text-nowrap whitespace-nowrap scroll-smooth

@@ -11,6 +11,10 @@ body {
   width: 7rem;
 }
 
+.card-group {
+  width: 100rem;
+}
+
 .card {
   width: 18rem;
 }

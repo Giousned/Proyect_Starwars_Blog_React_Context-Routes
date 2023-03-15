@@ -13,7 +13,7 @@ const DetailsPlanets = (props) =>{
             <div className="card mb-3 bg-dark text-white">
                 <div className="row g-0">
                     <div className="col-md-4">
-                    <img src="" style={{width: '300px'}} className="img-fluid rounded-start" alt="..."/>
+                    <img src="https://www.pepaferrer.com/wp-content/uploads/2020/12/hd1080.png" style={{width: '300px'}} className="img-fluid rounded-start" alt="..."/>
                     </div>
                 <div className="col-md-8 text-center">
                     <div className="card-body">
