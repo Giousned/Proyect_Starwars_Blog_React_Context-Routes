@@ -34,7 +34,7 @@ const Planets = () => {
   return (
     <div className="container text-nowrap overflow-auto card-group d-flex">
       {planetsProperties.map((item, index) => (
-        <CardPlanet key={index} properties={item.properties} />
+        <CardPlanet key={index} properties={item.properties} uid={item.uid}/>
       ))}
     </div>
   );

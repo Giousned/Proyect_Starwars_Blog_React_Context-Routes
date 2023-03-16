@@ -5,7 +5,7 @@ import "../../styles/home.css";
 const CardPeople = (props) => {
   return (
     <div className="card">
-      <img src="https://www.verance.com/app/uploads/2017/01/400x200.png" className="card-img-top" alt="..." />
+      <img src={"https://starwars-visualguide.com/assets/img/characters/"+props.uid+".jpg"} className="card-img-top" alt="..." />
       <div className="card-body">
         <h5 className="card-title fw-bold">{props.properties.name}</h5>
         <p className="card-text my-1">Gender: {props.properties.gender}</p>
@@ -20,7 +20,7 @@ const CardPeople = (props) => {
           >
             Learn more!
           </button>
-          <button type="button" className="btn btn-outline-warning">
+          <button onClick={e => props.addFavorites(e)} type="button" className="btn btn-outline-warning">
             <i className="fa-regular fa-heart"></i>
           </button>
         </div>

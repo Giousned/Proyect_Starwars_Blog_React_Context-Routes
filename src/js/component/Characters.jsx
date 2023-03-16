@@ -9,6 +9,8 @@ const Characters = () => {
   const [characters, setCharacters] = useState([]);
   const [propertie, setPropertie] = useState([]);
 
+  const [favorites, setFavorites] = useState([]);
+
   const getPeople = () => {
     fetch("https://www.swapi.tech/api/people/")
       .then((res) => res.json())
@@ -29,11 +31,16 @@ const Characters = () => {
 
   useEffect(() => getProperties(), [characters]);
 
+  const addFavorites = (e) => {
+    const arrayFavorites = [...favorites, e];
+    setFavorites(arrayFavorites);
+  }
+
   return (
-    <div className="relative flex items-center d-flex overflow-x-scroll scroll text-nowrap whitespace-nowrap scroll-smooth">
+    <div className="relative flex items-center d-flex overflow-x-auto text-nowrap whitespace-nowrap scroll-smooth">
       <div className="card-group">
         {propertie.map((item, index) => (
-          <CardPeople key={index} properties={item.properties} />
+          <CardPeople key={index} properties={item.properties} uid={item.uid} />
         ))}
       </div>
     </div>

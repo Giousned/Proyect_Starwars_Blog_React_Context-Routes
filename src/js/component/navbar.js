@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import starWars from "../../img/starwars.png";
 
 export const Navbar = () => {
+
+
+  
   return (
     <nav className="navbar navbar-light bg-light mb-3">
       <div className="ml-auto ms-5">
@@ -13,7 +16,7 @@ export const Navbar = () => {
       </div>
 
       <div className="ml-auto me-5">
-        <div class="btn-group">
+        <div className="btn-group">
           <button
             type="button"
             className="btn btn-primary dropdown-toggle"
