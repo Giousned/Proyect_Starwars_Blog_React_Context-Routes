@@ -37,7 +37,7 @@ const Characters = () => {
   }
 
   return (
-    <div className="relative flex items-center d-flex overflow-x-auto text-nowrap whitespace-nowrap scroll-smooth">
+    <div className="items-center d-flex overflow-x-auto text-nowrap whitespace-nowrap scroll-smooth">
       <div className="card-group">
         {propertie.map((item, index) => (
           <CardPeople key={index} properties={item.properties} uid={item.uid} />
@@ -50,6 +50,6 @@ const Characters = () => {
 export default Characters;
 
 
-// <div className="container text-nowrap overflow-auto card-group d-flex">
+// <div className="relative flex container text-nowrap overflow-auto card-group d-flex">
 
 // overflow-x-scroll scroll text-nowrap whitespace-nowrap scroll-smooth
