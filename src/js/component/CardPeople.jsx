@@ -1,8 +1,18 @@
 import React from "react";
 
+import { useContext } from "react";
+
+import { Link, useParams } from "react-router-dom";
+
+import { Context } from "../store/appContext";
+
 import "../../styles/home.css";
 
 const CardPeople = (props) => {
+
+  const { store, actions } = useContext(Context);
+
+
   return (
     <div className="card">
       <img src={"https://starwars-visualguide.com/assets/img/characters/"+props.uid+".jpg"} className="card-img-top" alt="..." />
@@ -18,9 +28,11 @@ const CardPeople = (props) => {
             type="button"
             className="btn btn-outline-primary"
           >
-            Learn more!
+            <Link to={"/detailsPeople/" + props.uid}>
+              Learn more!
+            </Link>
           </button>
-          <button onClick={e => props.addFavorites(e)} type="button" className="btn btn-outline-warning">
+          <button onClick={() => actions.addFavorites(props.properties.name)} type="button" className="btn btn-outline-warning">
             <i className="fa-regular fa-heart"></i>
           </button>
         </div>
@@ -30,3 +42,12 @@ const CardPeople = (props) => {
 };
 
 export default CardPeople;
+
+
+{/* <Link to={"/single/" + index}>
+  <span>Link to: {item.title}</span>
+</Link>
+
+<Link to="/">
+<button className="btn btn-primary">Back home</button>
+</Link> */}

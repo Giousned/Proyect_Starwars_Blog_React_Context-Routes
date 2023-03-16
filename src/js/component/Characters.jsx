@@ -1,45 +1,26 @@
 import React from "react";
 
-import { useState, useEffect } from "react";
+import { useContext } from "react";
 
 import CardPeople from "./CardPeople.jsx";
 
+import { Link } from "react-router-dom";
+
+import { Context } from "../store/appContext";
+
+import "../../styles/demo.css";
+
 
 const Characters = () => {
-  const [characters, setCharacters] = useState([]);
-  const [propertie, setPropertie] = useState([]);
 
-  const [favorites, setFavorites] = useState([]);
+  // const context = useContext(Context);  ASI SIN DESESTRUCTURAR
 
-  const getPeople = () => {
-    fetch("https://www.swapi.tech/api/people/")
-      .then((res) => res.json())
-      .then((data) => setCharacters(data.results))
-      .catch((err) => console.error(err));
-  };
-
-  const getProperties = () => {
-    characters.map((item) => {
-      fetch(item.url)
-        .then((res) => res.json())
-        .then((data) => setPropertie(prev => [...prev, data.result]))
-        .catch((err) => console.error(err));
-    });
-  };
-
-  useEffect(() => getPeople(), []);
-
-  useEffect(() => getProperties(), [characters]);
-
-  const addFavorites = (e) => {
-    const arrayFavorites = [...favorites, e];
-    setFavorites(arrayFavorites);
-  }
+  const { store, actions } = useContext(Context);
 
   return (
     <div className="items-center d-flex overflow-x-auto text-nowrap whitespace-nowrap scroll-smooth">
       <div className="card-group">
-        {propertie.map((item, index) => (
+        {store.peopleProperties.map((item, index) => (
           <CardPeople key={index} properties={item.properties} uid={item.uid} />
         ))}
       </div>

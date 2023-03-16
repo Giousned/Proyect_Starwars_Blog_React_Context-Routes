@@ -18,3 +18,10 @@ body {
 .card {
   width: 18rem;
 }
+
+.trashIcon {
+  background-color: grey;
+  border-radius: 15%;
+  display: inline-block;
+  width: 20px;
+}

@@ -1,10 +1,18 @@
 import React from "react";
 
+import { useContext } from "react";
+
+import { Context } from "../store/appContext";
+
 import "../../styles/home.css";
 
 import tatooine from "../../img/Tatooine.jpg";
 
 const CardPlanet = (props) => {
+
+  const { store, actions } = useContext(Context);
+
+
   return (
     <div className="card">
       <img src={(props.uid == 1) ? tatooine : "https://starwars-visualguide.com/assets/img/planets/"+props.uid+".jpg"} className="card-img-top" alt="..." />
