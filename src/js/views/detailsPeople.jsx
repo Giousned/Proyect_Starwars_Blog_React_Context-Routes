@@ -12,14 +12,13 @@ const DetailsPeople = () => {
 
   const params = useParams();
 
-  console.log(store.peopleProperties[params.id].properties.name);
 
   return (
     <div className="container">
       <div className="card mb-3 bg-dark text-white w-100">
         <div className="row g-0">
           <div className="col-md-5">
-            <img src={"https://starwars-visualguide.com/assets/img/characters/"+params.id+".jpg"} style={{width: "100%"}} className="img-fluid rounded-start" alt="..."/>
+            <img src={"https://starwars-visualguide.com/assets/img/characters/"+store.peopleProperties[params.id].uid+".jpg"} style={{width: "100%"}} className="img-fluid rounded-start" alt="..."/>
           </div>
           <div className="col-md-7 text-center">
             <div className="card-body h-100">

@@ -2,7 +2,7 @@ import React from "react";
 
 import { useContext } from "react";
 
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { Context } from "../store/appContext";
 
@@ -24,11 +24,10 @@ const CardPeople = (props) => {
 
         <div className="d-flex justify-content-between">
           <button
-            href={props.link}
             type="button"
             className="btn btn-outline-primary"
           >
-            <Link to={"/detailsPeople/" + props.uid}>
+            <Link to={"/detailsPeople/" + props.index}>
               Learn more!
             </Link>
           </button>

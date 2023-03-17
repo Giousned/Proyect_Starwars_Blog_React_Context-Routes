@@ -4,6 +4,8 @@ import { useContext } from "react";
 
 import { Context } from "../store/appContext";
 
+import { Link } from "react-router-dom";
+
 import "../../styles/home.css";
 
 import tatooine from "../../img/Tatooine.jpg";
@@ -23,13 +25,14 @@ const CardPlanet = (props) => {
 
         <div className="d-flex justify-content-between">
           <button
-            href={props.link}
             type="button"
             className="btn btn-outline-primary"
           >
-            Learn more!
+            <Link to={"/detailsPlanets/" + props.index}>
+              Learn more!
+            </Link>
           </button>
-          <button type="button" className="btn btn-outline-warning">
+          <button onClick={() => actions.addFavorites(props.properties.name)} type="button" className="btn btn-outline-warning">
             <i className="fa-regular fa-heart"></i>
           </button>
         </div>

@@ -2,14 +2,14 @@ import React from "react";
 
 import { useState } from "react";
 
-const getState = ({ getStore, getActions, setStore }) => {
+const getStateCopy = ({ getStore, getActions, setStore }) => {
 
 	const [characters, setCharacters] = useState([]);
   	const [peopleProperties, setPeopleProperties] = useState([]);
   	const [planets, setPlanets] = useState([]);
   	const [planetsProperties, setPlanetsProperties] = useState([]);
 
-  	const [favorites, setFavorites] = useState([]);
+  	const [favorites, setFavorites] = useState([1]);
 
 
 	return {
@@ -106,4 +106,39 @@ const getState = ({ getStore, getActions, setStore }) => {
 	};
 };
 
-export default getState;
+
+
+// loadDataPeople: () => {
+// 	/**
+// 		fetch().then().then(data => setStore({ "foo": data.bar }))
+// 	*/
+// 	fetch("https://www.swapi.tech/api/people/")
+// 		.then((res) => res)
+// 		.then((data) => {
+
+// 			const store = getStore();
+
+// 			const dataId = data.results;
+// 			console.log(dataId)
+
+// 			fetch(`https://www.swapi.tech/api/people/${dataId}`)
+// 				.then((res) => res.json())
+// 				.then((data) => console.log(data))  //setStore({peopleProperties: [...store.peopleProperties, data.result]})
+// 				.catch((err) => console.error(err));
+// 			})
+// 		.catch((err) => console.error(err));
+// },
+// loadDataPlanets: () => {
+// 	fetch("https://www.swapi.tech/api/planets/")
+// 		.then((res) => res)
+// 		.then((data) => {
+
+// 			const store = getStore();
+
+// 				fetch(data.url)
+// 				.then((res) => res.json())
+// 				.then((data) => console.log(data)) //setStore({planetsProperties: [...store.planetsProperties, data.result]})
+// 				.catch((err) => console.error(err));
+// 			})
+// 		.catch((err) => console.error(err));
+// },

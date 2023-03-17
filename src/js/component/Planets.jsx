@@ -4,12 +4,9 @@ import { useContext } from "react";
 
 import CardPlanet from "./CardPlanet.jsx";
 
-import { Link } from "react-router-dom";
-
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.css";
-
 
 
 const Planets = () => {
@@ -18,9 +15,9 @@ const Planets = () => {
   
   
   return (
-    <div className="container text-nowrap overflow-auto card-group d-flex">
+    <div className="card-group d-flex container text-nowrap overflow-auto">
       {store.planetsProperties.map((item, index) => (
-        <CardPlanet key={index} properties={item.properties} uid={item.uid}/>
+        <CardPlanet key={index} properties={item.properties} uid={item.uid} index={index} />
       ))}
     </div>
   );

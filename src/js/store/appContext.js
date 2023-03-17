@@ -60,6 +60,14 @@ const injectContext = PassedComponent => {
 export default injectContext;
 
 
+// useEffect(() => {
+// 	state.actions.loadDataPeopleProperties();
+// }, [state.store.characters]);
+// useEffect(() => {
+// 	state.actions.loadDataPlanetsProperties();
+// }, [state.store.planets]);
+
+
 // OTRA FORMA DE HACER MAS SIMPLE USANDO LA PROPS CHILDREN POR DEFECTO EXISTENTE
 // const StoreWrapper = props => {
 // 	//this will be passed as the contenxt value
