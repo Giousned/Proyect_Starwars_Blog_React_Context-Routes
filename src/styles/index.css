@@ -11,13 +11,24 @@ body {
   width: 7rem;
 }
 
-.card-group {
-  width: 100rem;
+#cardGroup {
+  display: flex;
+  width: 2500px;
 }
 
-.card {
-  width: 18rem;
+#containerPlanets, #containerCharacters{
+  overflow-x: scroll;
 }
+
+#textoDescripcion{
+  text-align: justify;
+  margin-top: 200px;
+}
+
+/* #cartasGrid {
+  display: block;
+  width: 500px;
+} */
 
 .trashIcon {
   background-color: grey;

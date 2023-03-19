@@ -16,7 +16,7 @@ const Characters = () => {
   const { store, actions } = useContext(Context);
 
   return (
-      <div className="card-group d-flex container text-nowrap overflow-auto">
+      <div className="card-group" id="cardGroup">
         {store.peopleProperties.map((item, index) => (
           <CardPeople key={index} properties={item.properties} uid={item.uid} index={index} />
         ))}
@@ -29,5 +29,5 @@ export default Characters;
 
 // <div className="relative flex container text-nowrap overflow-auto card-group d-flex">
 // <div className="items-center d-flex overflow-x-auto text-nowrap whitespace-nowrap scroll-smooth">
-// <div className="card-group">
+// <div className="card-group d-flex container text-nowrap overflow-auto">
 // overflow-x-scroll scroll text-nowrap whitespace-nowrap scroll-smooth

@@ -26,7 +26,7 @@ const DetailsPlanets = (props) =>{
           <div className="col-md-7 text-center">
             <div className="card-body h-100">
               <h5 className="card-title fs-1">{store.planetsProperties[params.id].properties.name}</h5>
-              <p className="card-text">
+              <p className="card-text" id="textoDescripcion">
                 Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza
                 clasica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de
                 antiguedad. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.

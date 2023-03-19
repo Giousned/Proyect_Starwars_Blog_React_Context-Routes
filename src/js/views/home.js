@@ -11,11 +11,13 @@ export const Home = () => {
 
   return (
     <div className="container mt-3">
+
       <h1 className="text-danger">Characters</h1>
-      <Characters />
+      <div id="containerCharacters"><Characters /></div>
+
 
       <h1 className="text-danger">Planets</h1>
-      <Planets />
+      <div id="containerPlanets"><Planets /></div>
     </div>
   );
 };

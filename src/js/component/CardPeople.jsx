@@ -14,7 +14,7 @@ const CardPeople = (props) => {
 
 
   return (
-    <div className="card">
+    <div className="card" id="cartasGrid">
       <img src={"https://starwars-visualguide.com/assets/img/characters/"+props.uid+".jpg"} className="card-img-top" alt="..." />
       <div className="card-body">
         <h5 className="card-title fw-bold">{props.properties.name}</h5>
@@ -22,7 +22,7 @@ const CardPeople = (props) => {
         <p className="card-text my-1">Hair Color: {props.properties.hair_color}</p>
         <p className="card-text my-1">Eye Color: {props.properties.eye_color}</p>
 
-        <div className="d-flex justify-content-between">
+        <div className="d-flex justify-content-between my-4">
           <button
             type="button"
             className="btn btn-outline-primary"
