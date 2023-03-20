@@ -35,6 +35,7 @@ const injectContext = PassedComponent => {
 
 			state.actions.loadDataPeople();
 			state.actions.loadDataPlanets();
+			state.actions.loadDataVehicles();
 		}, []);
 
 		useEffect(() => {
@@ -43,6 +44,9 @@ const injectContext = PassedComponent => {
 		useEffect(() => {
 			state.actions.loadDataPlanetsProperties();
 		}, [state.store.planets]);
+		useEffect(() => {
+			state.actions.loadDataVehiclesProperties();
+		}, [state.store.vehicles]);
 		
 
 		// The initial value for the context is not null anymore, but the current state of this component,

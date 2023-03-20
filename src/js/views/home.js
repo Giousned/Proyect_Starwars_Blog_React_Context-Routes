@@ -2,6 +2,7 @@ import React from "react";
 
 import Characters from "../component/Characters.jsx";
 import Planets from "../component/Planets.jsx";
+import Vehicles from "../component/Vehicles.jsx";
 
 import "../../styles/home.css";
 
@@ -15,9 +16,11 @@ export const Home = () => {
       <h1 className="text-danger">Characters</h1>
       <div id="containerCarrusel"><Characters /></div>
 
-
       <h1 className="text-danger">Planets</h1>
       <div id="containerCarrusel"><Planets /></div>
+
+      <h1 className="text-danger">Vehicles</h1>
+      <div id="containerCarrusel"><Vehicles /></div>
     </div>
   );
 };

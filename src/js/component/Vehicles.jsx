@@ -9,24 +9,23 @@ import { Context } from "../store/appContext";
 import "../../styles/demo.css";
 
 
-const Characters = () => {
-
-  // const context = useContext(Context);  ASI SIN DESESTRUCTURAR
+const Vehicles = () => {
 
   const { store, actions } = useContext(Context);
 
   return (
       <div className="card-group" id="cardGroup">
-        {store.peopleProperties.map((item, index) => (
+        {store.vehiclesProperties.map((item, index) => (
           <CardPeople key={index} properties={item.properties} uid={item.uid} index={index} description={item.description} />
         ))}
       </div>
   );
 };
 
-export default Characters;
+export default Vehicles;
 
 
 // <div className="relative flex container text-nowrap overflow-auto card-group d-flex">
-// <div className="items-center d-flex scroll overflow-x-auto text-nowrap whitespace-nowrap scroll-smooth">
-// <div className="card-group d-flex overflow-x-scroll container text-nowrap overflow-auto">
+// <div className="items-center d-flex overflow-x-auto text-nowrap whitespace-nowrap scroll-smooth">
+// <div className="card-group d-flex container text-nowrap overflow-auto">
+// overflow-x-scroll scroll text-nowrap whitespace-nowrap scroll-smooth

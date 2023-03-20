@@ -8,6 +8,8 @@ const getState = ({ getStore, getActions, setStore }) => {
   	const [peopleProperties, setPeopleProperties] = useState([]);
   	const [planets, setPlanets] = useState([]);
   	const [planetsProperties, setPlanetsProperties] = useState([]);
+	const [vehicles, setVehicles] = useState([]);
+  	const [vehiclesProperties, setVehiclesProperties] = useState([]);
 
   	const [favorites, setFavorites] = useState([]);
 
@@ -30,6 +32,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			peopleProperties,
 			planets,
 			planetsProperties,
+			vehicles,
+			vehiclesProperties,
 			favorites
 		},
 		actions: {
@@ -71,6 +75,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 					fetch(item.url)
 					  .then((res) => res.json())
 					  .then((data) => setStore({planetsProperties: [...store.planetsProperties, data.result]}))
+					  .catch((err) => console.error(err));
+				  });
+			},
+			loadDataVehicles: () => {
+				fetch("https://www.swapi.tech/api/vehicles/")
+					.then((res) => res.json())
+					.then((data) => setStore({vehicles: data.results}))
+					.catch((err) => console.error(err));
+			},
+			loadDataVehiclesProperties: () => {
+				
+				const store = getStore();
+
+				store.vehicles.map((item) => {
+					fetch(item.url)
+					  .then((res) => res.json())
+					  .then((data) => setStore({vehiclesProperties: [...store.vehiclesProperties, data.result]}))
 					  .catch((err) => console.error(err));
 				  });
 			},
