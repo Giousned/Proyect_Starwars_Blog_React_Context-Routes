@@ -16,13 +16,17 @@ body {
   width: 2500px;
 }
 
-#containerPlanets, #containerCharacters{
+#containerCarrusel{
   overflow-x: scroll;
 }
 
 #textoDescripcion{
   text-align: justify;
-  margin-top: 200px;
+  font-size: 20px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  height: 90%;
 }
 
 /* #cartasGrid {

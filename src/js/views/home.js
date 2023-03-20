@@ -13,11 +13,11 @@ export const Home = () => {
     <div className="container mt-3">
 
       <h1 className="text-danger">Characters</h1>
-      <div id="containerCharacters"><Characters /></div>
+      <div id="containerCarrusel"><Characters /></div>
 
 
       <h1 className="text-danger">Planets</h1>
-      <div id="containerPlanets"><Planets /></div>
+      <div id="containerCarrusel"><Planets /></div>
     </div>
   );
 };

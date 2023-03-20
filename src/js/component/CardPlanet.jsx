@@ -17,14 +17,17 @@ const CardPlanet = (props) => {
 
   return (
     <div className="card" id="cartasGrid">
+      
       <img src={(props.uid == 1) ? tatooine : "https://starwars-visualguide.com/assets/img/planets/"+props.uid+".jpg"} className="card-img-top" alt="..." />
+      
       <div className="card-body">
-        <h5 className="card-title fw-bold">{props.properties.name}</h5>
-        <p className="card-text my-1">Population: {props.properties.population}</p>
-        <p className="card-text my-1">Terrain: {props.properties.terrain}</p>
+        <h5 className="card-title fw-bold text-center text-info">{props.properties.name}</h5>
+        <p className="card-text my-1"> <span className="text-decoration-underline fw-bolder fst-italic">Population:</span> {props.properties.population}</p>
+        <p className="card-text my-1"> <span className="text-decoration-underline fw-bolder fst-italic">Terrain:</span> {props.properties.terrain}</p>
+      </div>
 
-        <div className="d-flex justify-content-between my-4">
-          <button
+      <div className="card-footer d-flex justify-content-between">
+        <button
             type="button"
             className="btn btn-outline-primary"
           >
@@ -35,7 +38,6 @@ const CardPlanet = (props) => {
           <button onClick={() => actions.addFavorites(props.properties.name)} type="button" className="btn btn-outline-warning">
             <i className="fa-regular fa-heart"></i>
           </button>
-        </div>
       </div>
     </div>
   );
