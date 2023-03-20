@@ -18,7 +18,7 @@ const Characters = () => {
   return (
       <div className="card-group" id="cardGroup">
         {store.peopleProperties.map((item, index) => (
-          <CardPeople key={index} properties={item.properties} uid={item.uid} index={index} />
+          <CardPeople key={index} properties={item.properties} uid={item.uid} index={index} description={item.description} />
         ))}
       </div>
   );

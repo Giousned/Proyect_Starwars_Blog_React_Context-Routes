@@ -74,14 +74,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					  .catch((err) => console.error(err));
 				  });
 			},
-			addFavorites: (name, index, e) => {
+			addFavorites: (index, nombre, descripcion) => {
 
 				const store = getStore();
 
-				console.log(index)
-				console.log(e)
+				const objFavorites = {id: index, description: descripcion, name: nombre}
 
-				const arrayFavorites = [...store.favorites, name];
+				const arrayFavorites = [...store.favorites, objFavorites];
 				setStore({favorites: arrayFavorites});
 			},
 			deleteFavorites: (indice) => {

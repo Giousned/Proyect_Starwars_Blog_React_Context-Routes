@@ -16,8 +16,6 @@ export const Navbar = () => {
 
   const { store, actions } = useContext(Context);
 
-  console.log(store.peopleProperties)
-
   
   return (
     <nav className="navbar navbar-light bg-light mb-3">
@@ -41,7 +39,12 @@ export const Navbar = () => {
             {store.favorites.map((item, index) => {
               return (
                 <li key={index} className="dropdown-item d-flex justify-content-between">
-                  <span id="textoFavorito"><Link to={"/detailsPeople/" + store.peopleProperties.uid}> {item} </Link> </span>
+
+                  {(item.description === "A person within the Star Wars universe") 
+                    ? <span id="textoFavorito"><Link to={"/detailsPeople/" + item.id}> {item.name} </Link> </span> 
+                    : (item.description === "A planet.") ? <span id="textoFavorito"><Link to={"/detailsPlanets/" + item.id}> {item.name} </Link> </span> : null
+                  }
+                  
                   <button type="button" onClick={() => actions.deleteFavorites(index)} className="btn btn-outline-danger ms-2"> <i className="fa-solid fa-trash"></i> </button>
                 </li>
               );

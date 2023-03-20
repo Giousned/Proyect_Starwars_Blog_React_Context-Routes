@@ -35,7 +35,7 @@ const CardPlanet = (props) => {
               Learn more!
             </Link>
           </button>
-          <button onClick={() => actions.addFavorites(props.properties.name)} type="button" className="btn btn-outline-warning">
+          <button onClick={() => actions.addFavorites(props.index, props.properties.name, props.description)} type="button" className="btn btn-outline-warning">
             <i className="fa-regular fa-heart"></i>
           </button>
       </div>

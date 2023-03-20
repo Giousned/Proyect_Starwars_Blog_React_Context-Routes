@@ -8,10 +8,11 @@ import { Context } from "../store/appContext";
 
 import "../../styles/home.css";
 
+
+
 const CardPeople = (props) => {
 
   const { store, actions } = useContext(Context);
-
 
   return (
     <div className="card" id="cartasGrid">
@@ -34,7 +35,7 @@ const CardPeople = (props) => {
             Learn more!
           </Link>
         </button>
-        <button onClick={(e) => actions.addFavorites(props.properties.name, props.index, e)} type="button" className="btn btn-outline-warning">
+        <button onClick={() => actions.addFavorites(props.index, props.properties.name, props.description)} type="button" className="btn btn-outline-warning">
           <i className="fa-regular fa-heart"></i>
         </button>
       </div>
