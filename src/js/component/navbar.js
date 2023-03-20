@@ -16,6 +16,8 @@ export const Navbar = () => {
 
   const { store, actions } = useContext(Context);
 
+  console.log(store.peopleProperties)
+
   
   return (
     <nav className="navbar navbar-light bg-light mb-3">
@@ -37,9 +39,12 @@ export const Navbar = () => {
           </button>
           <ul className="dropdown-menu dropdown-menu-end">
             {store.favorites.map((item, index) => {
-              return (<li key={index} className="dropdown-item d-flex justify-content-between">
-                  {item}<i onClick={() => actions.deleteFavorites(index)} className="fa-solid fa-trash p-1"></i>
-              </li>);
+              return (
+                <li key={index} className="dropdown-item d-flex justify-content-between">
+                  <span id="textoFavorito"><Link to={"/detailsPeople/" + store.peopleProperties.uid}> {item} </Link> </span>
+                  <button type="button" onClick={() => actions.deleteFavorites(index)} className="btn btn-outline-danger ms-2"> <i className="fa-solid fa-trash"></i> </button>
+                </li>
+              );
             })}  
           </ul>
         </div>
@@ -47,3 +52,17 @@ export const Navbar = () => {
     </nav>
   );
 };
+
+
+{/* <ul className="dropdown-menu" style={{ height: 'auto', width:'220px'}}>
+{props.favoritos.map((element,index)=>{
+return(
+  <>
+  <div className="text-wrap row mt-1">
+  <div className="col-8"><li>{element}</li></div>
+  <div className="col-4"><button type="button" onClick={()=>props.borrar(index)} className="btn btn-outline-danger btn-sm"> 🗑️ </button></div>
+  </div>
+  </>	
+)})
+}
+</ul> */}
