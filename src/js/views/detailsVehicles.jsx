@@ -1,10 +1,13 @@
 import React from "react";
 
+
 import { useContext } from "react";
 
 import { useParams } from "react-router-dom";
 
 import { Context } from "../store/appContext";
+
+
 
 const DetailsVehicles = () => {
 
@@ -18,7 +21,7 @@ const DetailsVehicles = () => {
       <div className="card mb-3 bg-dark text-white w-100">
         <div className="row g-0">
           <div className="col-md-5">
-            <img src={"https://starwars-visualguide.com/assets/img/vehicles/"+store.vehiclesProperties[params.id].uid+".jpg"} style={{width: "100%"}} className="img-fluid rounded-start" alt="..."/>
+            <img id="imagenDetalladaVehicles" src={"https://starwars-visualguide.com/assets/img/vehicles/"+store.vehiclesProperties[params.id].uid+".jpg"} className="img-fluid rounded-start" alt="..."/>
           </div>
 
           <div className="col-md-7 text-center">

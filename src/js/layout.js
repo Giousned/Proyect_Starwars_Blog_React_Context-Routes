@@ -11,6 +11,7 @@ import { Footer } from "./component/footer.js";
 
 import DetailsPlanets from "./views/detailsPlanets.jsx";
 import DetailsPeople from "./views/detailsPeople.jsx";
+import DetailsVehicles from "./views/detailsVehicles.jsx";
 
 //create your first component
 const Layout = () => {

@@ -1,12 +1,15 @@
 import React from "react";
 
+
 import { useContext } from "react";
 
 import { useParams } from "react-router-dom";
 
 import { Context } from "../store/appContext";
 
+
 import tatooine from "../../img/Tatooine.jpg";
+
 
 
 const DetailsPlanets = (props) =>{
@@ -21,7 +24,7 @@ const DetailsPlanets = (props) =>{
       <div className="card mb-3 bg-dark text-white w-100">
         <div className="row g-0">
           <div className="col-md-5">
-            <img src={(store.planetsProperties[params.id].uid == 1) ? tatooine :"https://starwars-visualguide.com/assets/img/planets/"+store.planetsProperties[params.id].uid+".jpg"} style={{width: "100%"}} className="img-fluid rounded-start" alt="..."/>
+            <img id="imagenDetallada" src={(store.planetsProperties[params.id].uid == 1) ? tatooine :"https://starwars-visualguide.com/assets/img/planets/"+store.planetsProperties[params.id].uid+".jpg"} className="img-fluid rounded-start" alt="..."/>
           </div>
 
           <div className="col-md-7 text-center">

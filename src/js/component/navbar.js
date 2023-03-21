@@ -1,5 +1,6 @@
 import React from "react";
 
+
 import { useContext } from "react";
 
 import { Context } from "../store/appContext";
@@ -9,7 +10,6 @@ import { Link } from "react-router-dom";
 
 import starWars from "../../img/starwars.png";
 
-import "../../styles/demo.css";
 
 
 export const Navbar = () => {
@@ -18,7 +18,7 @@ export const Navbar = () => {
 
   
   return (
-    <nav className="navbar navbar-light bg-light mb-3">
+    <nav className="navbar navbar-light bg-body-tertiary mb-3">
       <div className="ml-auto ms-5">
         <Link to="/">
           <img src={starWars} width="100px" height="100px" />
@@ -42,7 +42,9 @@ export const Navbar = () => {
 
                   {(item.description === "A person within the Star Wars universe") 
                     ? <span id="textoFavorito"><Link to={"/detailsPeople/" + item.id}> {item.name} </Link> </span> 
-                    : (item.description === "A planet.") ? <span id="textoFavorito"><Link to={"/detailsPlanets/" + item.id}> {item.name} </Link> </span> : null
+                    : (item.description === "A planet.") ? <span id="textoFavorito"><Link to={"/detailsPlanets/" + item.id}> {item.name} </Link> </span>
+                    : (item.description === "A vehicle") ? <span id="textoFavorito"><Link to={"/detailsVehicles/" + item.id}> {item.name} </Link> </span>
+                    : null
                   }
                   
                   <button type="button" onClick={() => actions.deleteFavorites(index)} className="btn btn-outline-danger ms-2"> <i className="fa-solid fa-trash"></i> </button>

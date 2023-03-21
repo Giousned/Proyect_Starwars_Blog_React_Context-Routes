@@ -1,12 +1,12 @@
 import React from "react";
 
+
 import { useContext } from "react";
 
 import CardPlanet from "./CardPlanet.jsx";
 
 import { Context } from "../store/appContext";
 
-import "../../styles/demo.css";
 
 
 const Planets = () => {
@@ -24,6 +24,3 @@ const Planets = () => {
 };
 
 export default Planets;
-
-
-// d-flex text-nowrap overflow-auto

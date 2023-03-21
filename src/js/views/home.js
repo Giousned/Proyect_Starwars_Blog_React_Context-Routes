@@ -16,10 +16,10 @@ export const Home = () => {
       <h1 className="text-danger">Characters</h1>
       <div id="containerCarrusel"><Characters /></div>
 
-      <h1 className="text-danger">Planets</h1>
+      <h1 className="text-danger mt-3">Planets</h1>
       <div id="containerCarrusel"><Planets /></div>
 
-      <h1 className="text-danger">Vehicles</h1>
+      <h1 className="text-danger mt-3">Vehicles</h1>
       <div id="containerCarrusel"><Vehicles /></div>
     </div>
   );

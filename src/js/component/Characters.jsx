@@ -1,12 +1,12 @@
 import React from "react";
 
+
 import { useContext } from "react";
 
 import CardPeople from "./CardPeople.jsx";
 
 import { Context } from "../store/appContext";
 
-import "../../styles/demo.css";
 
 
 const Characters = () => {
