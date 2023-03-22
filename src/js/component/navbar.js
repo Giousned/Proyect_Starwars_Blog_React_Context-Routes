@@ -18,7 +18,7 @@ export const Navbar = () => {
 
   
   return (
-    <nav className="navbar navbar-light bg-body-tertiary mb-3">
+    <nav className="navbar navbar-light bg-white mb-3">
       <div className="ml-auto ms-5">
         <Link to="/">
           <img src={starWars} width="100px" height="100px" />

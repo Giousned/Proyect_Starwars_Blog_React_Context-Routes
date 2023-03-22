@@ -1,13 +1,18 @@
 /* 
     General Styles
 */
+
 body {
   /* background-color: white; */
   /* color: black; */
-    /* background-size: contain; */
+  /* background-size: contain; */
   /* background-repeat: no-repeat; */
   background-image: url("https://media.revistagq.com/photos/604b2f499fc97c95e82c1c14/master/pass/2101913.jpg");
   background-size: 3380px;
+}
+
+.navbar {
+  background-image: url("/workspace/react-hello-webapp/src/img/5.jpg");
 }
 
 .logo {
