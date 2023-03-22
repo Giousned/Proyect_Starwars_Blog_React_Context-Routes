@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 
 
 import starWars from "../../img/starwars.png";
+import laserX from "../../img/laserX.png";
+
 
 
 
@@ -21,7 +23,7 @@ export const Navbar = () => {
     <nav className="navbar navbar-light bg-white mb-3">
       <div className="ml-auto ms-5">
         <Link to="/">
-          <img src={starWars} width="100px" height="100px" />
+          <img id="logo" src={starWars} />
         </Link>
       </div>
 
@@ -29,11 +31,15 @@ export const Navbar = () => {
         <div className="btn-group">
           <button
             type="button"
-            className="btn btn-primary dropdown-toggle fw-bold fs-6"
+            id="butonFav"
+            className="btn btn-primary dropdown-toggle fw-bold fs-5"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Favorites <span className="trashIcon">{store.favorites.length}</span>
+            Favorites <span id="favIcon" className="fa-layers fa-fw"> 
+                          <i className="fa-regular fa-heart fa-2x"></i>
+                          <span className="fa-layers-text fa-inverse">{store.favorites.length}</span>
+                      </span>            
           </button>
           <ul className="dropdown-menu dropdown-menu-end">
             {store.favorites.map((item, index) => {
@@ -47,7 +53,7 @@ export const Navbar = () => {
                     : null
                   }
                   
-                  <button type="button" onClick={() => actions.deleteFavorites(index)} className="btn btn-outline-danger ms-2"> <i className="fa-solid fa-trash"></i> </button>
+                  <button id="botonesDelete" type="button" onClick={() => actions.deleteFavorites(index)} className="btn btn-outline-danger ms-2"> <img className="iconoDelete" src={laserX} /> </button>
                 </li>
               );
             })}  
@@ -71,3 +77,7 @@ return(
 )})
 }
 </ul> */}
+
+{/* <span className="trashIcon"><i className="fa-regular fa-heart">{store.favorites.length}</i></span>
+data-fa-transform="shrink-8 down-3"
+<i className="fa-solid fa-trash"></i>*/}

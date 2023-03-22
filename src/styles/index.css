@@ -5,19 +5,19 @@
 body {
   /* background-color: white; */
   /* color: black; */
-  /* background-size: contain; */
   /* background-repeat: no-repeat; */
   background-image: url("https://media.revistagq.com/photos/604b2f499fc97c95e82c1c14/master/pass/2101913.jpg");
-  background-size: 3380px;
+  background-size: fill;
 }
 
 .navbar {
-  background-image: url("/workspace/react-hello-webapp/src/img/5.jpg");
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4d2f3d93-e8b3-4e6d-bc04-80d1b99db218/d97g7bt-8fabadb3-b940-48b7-a612-00c4bec89ddd.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRkMmYzZDkzLWU4YjMtNGU2ZC1iYzA0LTgwZDFiOTlkYjIxOFwvZDk3ZzdidC04ZmFiYWRiMy1iOTQwLTQ4YjctYTYxMi0wMGM0YmVjODlkZGQuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.5JqQXbk26lcDbqIu83bUMXlMxbinnTZ9kat6kU5hjBY");
+  background-size: auto;
 }
 
-.logo {
-  height: 7rem;
-  width: 7rem;
+#logo {
+  height: 100px;
+  width: 100px;
 }
 
 #imagenDetallada{
@@ -52,12 +52,117 @@ body {
   align-items: center;
 }
 
-.trashIcon {
-  background-color: grey;
+span.fa-layers-text {
+  position: relative;
+  left: -25px;
+  top: -7.5px;
+  font-size: 18px;
+  font-weight: 600;
+  color:rebeccapurple;
+}
+
+#butonFav{
+  display: flex;
+  align-items: center;
+}
+
+#favIcon {
+  background-color: gainsboro;
   border-radius: 15%;
   display: inline-block;
-  width: 20px;
+  width: 50px;
+  height: 47px;
+  padding: 5px;
+  margin-left: 10px;
+  margin-right: 5px;
+  color: darkorange;
 }
+
+#botonesDetalles {
+  width: 100px;
+  height: 45px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  /* outline: none;
+  border: none;
+  color: #000; */
+  }  
+
+#botonesDetalles:hover {
+  background-color: #2EDCE5;
+  box-shadow: 0px 15px 20px rgba(155, 241, 240, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.iconoFav{
+  /* background-size: contain; */
+  width: 35px;
+  height: 35px;
+}
+
+#botonesFavs{
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+}
+
+#botonesFavs:hover {
+  background-color: aquamarine;
+  box-shadow: 0px 15px 20px rgba(155, 241, 240, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.iconoDelete{
+  width: 35px;
+  height: 35px;
+}
+
+#botonesDelete{
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+}
+
+#botonesDelete:hover {
+  background-color: rgba(251, 49, 49, 0.814);
+  box-shadow: 0px 15px 20px rgba(155, 241, 240, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .container::-webkit-scrollbar {
   width: 8px;     /* Tamaño del scroll en vertical */
