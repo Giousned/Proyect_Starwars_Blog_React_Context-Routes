@@ -21,7 +21,7 @@ const DetailsPlanets = (props) =>{
 
   return(
     <div className="container">
-      <div className="card mb-3 bg-dark text-white w-100">
+      <div className="card mb-3 bg-secondary text-white w-100">
         <div className="row g-0">
           <div className="col-md-5">
             <img id="imagenDetallada" src={(store.planetsProperties[params.id].uid == 1) ? tatooine :"https://starwars-visualguide.com/assets/img/planets/"+store.planetsProperties[params.id].uid+".jpg"} className="img-fluid rounded-start" alt="..."/>
@@ -31,7 +31,7 @@ const DetailsPlanets = (props) =>{
 
             <div className="card-body h-100">
 
-              <h5 className="card-title fs-1 text-info">{store.planetsProperties[params.id].properties.name}</h5>
+              <h5 className="card-title fs-1 text-info text-decoration-underline">{store.planetsProperties[params.id].properties.name}</h5>
 
               <div id="textoDescripcion">
                 <p className="card-text">
@@ -51,7 +51,7 @@ const DetailsPlanets = (props) =>{
       <div className="h4 pb-2 mb-4 text-danger border-bottom border-danger mt-5">
       </div>
 
-      <div className="container mt-5 text-danger text-center">
+      <div id="textoDetalles" className="container mt-5 text-center">
           <div className="row g-0">
               <div className="col-md-2">
                   <strong>Name</strong> 

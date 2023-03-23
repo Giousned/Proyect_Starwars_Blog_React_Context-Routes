@@ -7,6 +7,7 @@ import { Context } from "../store/appContext";
 import Characters from "../component/Characters.jsx";
 import Planets from "../component/Planets.jsx";
 import Vehicles from "../component/Vehicles.jsx";
+import Loader from "../component/Loader.jsx";
 
 
 
@@ -22,22 +23,24 @@ export const Home = () => {
       <h1 className="text-danger">Characters</h1>
       {(store.peopleProperties.length !== 0) 
           ? <div id="containerCarrusel"><Characters /></div>
-          : <button className="btn btn-warning fw-bolder position-relative top-50 start-50" type="button" disabled> <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...</button> 
+          : <div className="d-flex justify-content-center"> <Loader /> </div> 
       }
       
       <h1 className="text-danger mt-3">Planets</h1>
       {(store.planetsProperties.length !== 0) 
           ? <div id="containerCarrusel"><Planets /></div>
-          : <button className="btn btn-warning fw-bolder position-relative top-50 start-50" type="button" disabled> <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...</button> 
+          : <div className="d-flex justify-content-center"> <Loader /> </div>
       }
       
-
       <h1 className="text-danger mt-3">Vehicles</h1>
       {(store.vehiclesProperties.length !== 0) 
           ? <div id="containerCarrusel"><Vehicles /></div>
-          : <button className="btn btn-warning fw-bolder position-relative top-50 start-50" type="button" disabled> <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...</button> 
+          : <div className="d-flex justify-content-center"> <Loader /> </div> 
       }
       
     </div>
   );
 };
+
+
+{/* <button className="btn btn-warning fw-bolder position-relative top-50 start-50" type="button" disabled> <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...</button> */}

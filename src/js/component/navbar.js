@@ -21,7 +21,7 @@ export const Navbar = () => {
   
   return (
     <nav className="navbar navbar-light bg-white mb-3">
-      <div className="ml-auto ms-5">
+      <div id="iconoHome" className="ml-auto">
         <Link to="/">
           <img id="logo" src={starWars} />
         </Link>
@@ -42,21 +42,24 @@ export const Navbar = () => {
                       </span>            
           </button>
           <ul className="dropdown-menu dropdown-menu-end">
-            {store.favorites.map((item, index) => {
-              return (
-                <li key={index} className="dropdown-item d-flex justify-content-between">
-
-                  {(item.description === "A person within the Star Wars universe") 
-                    ? <span id="textoFavorito"><Link to={"/detailsPeople/" + item.id}> {item.name} </Link> </span> 
-                    : (item.description === "A planet.") ? <span id="textoFavorito"><Link to={"/detailsPlanets/" + item.id}> {item.name} </Link> </span>
-                    : (item.description === "A vehicle") ? <span id="textoFavorito"><Link to={"/detailsVehicles/" + item.id}> {item.name} </Link> </span>
-                    : null
-                  }
-                  
-                  <button id="botonesDelete" type="button" onClick={() => actions.deleteFavorites(index)} className="btn btn-outline-danger ms-2"> <img className="iconoDelete" src={laserX} /> </button>
-                </li>
-              );
-            })}  
+            {(store.favorites.length === 0) 
+                ? <li className="dropdown-item d-flex justify-content-center"> (Empty) </li> 
+                : store.favorites.map((item, index) => {
+                  return (
+                          <li key={index} className="dropdown-item d-flex justify-content-between">
+    
+                            {(item.description === "A person within the Star Wars universe") 
+                              ? <span id="textoFavorito"><Link to={"/detailsPeople/" + item.id}> {item.name} </Link> </span> 
+                              : (item.description === "A planet.") ? <span id="textoFavorito"><Link to={"/detailsPlanets/" + item.id}> {item.name} </Link> </span>
+                              : (item.description === "A vehicle") ? <span id="textoFavorito"><Link to={"/detailsVehicles/" + item.id}> {item.name} </Link> </span>
+                              : null
+                            }
+                            
+                            <button id="botonesDelete" type="button" onClick={() => actions.deleteFavorites(index)} className="btn btn-outline-danger ms-2"> <img className="iconoDelete" src={laserX} /> </button>
+                          </li>
+                        );
+                  })
+            }   
           </ul>
         </div>
       </div>
