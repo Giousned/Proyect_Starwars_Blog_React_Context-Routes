@@ -31,14 +31,13 @@ const CardPeople = (props) => {
       <div className="card-footer d-flex justify-content-between">
         <button
           type="button"
-          id="botonesDetalles"
-          className="btn btn-outline-primary"
+          className="botonesDetalles btn btn-outline-primary"
         >
           <Link to={"/detailsPeople/" + props.index}>
             Learn more!
           </Link>
         </button>
-        <button id="botonesFavs" onClick={() => actions.addFavorites(props.index, props.properties.name, props.description)} type="button" className="btn btn-outline-warning">
+        <button onClick={() => actions.addFavorites(props.index, props.properties.name, props.description)} type="button" className="botonesFavs btn btn-outline-warning">
           <img className="iconoFav" src={bb8} />
         </button>
       </div>

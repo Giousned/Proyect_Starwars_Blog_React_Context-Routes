@@ -45,7 +45,7 @@ const DetailsPeople = () => {
         </div>
       </div>
 
-      <div className="h4 pb-2 mb-4 text-danger border-bottom border-danger mt-5"></div>
+      <div className="h4 pb-2 mb-4 border-bottom border-danger border-3 mt-5"></div>
 
       <div id="textoDetalles" className="container mt-5 text-center">
         <div className="row g-0">

@@ -20,6 +20,10 @@ body {
   width: 100px;
 }
 
+#iconoHome{
+  margin-left: 150px;
+}
+
 .imagenEspera{
   width: 150px;
   height: 150px;
@@ -42,6 +46,8 @@ body {
 
 #containerCarrusel{
   overflow-x: scroll;
+  scrollbar-color: Fuchsia coral;
+  scrollbar-width: auto;
 }
 
 #textoDescripcion{
@@ -88,7 +94,7 @@ span.fa-layers-text {
   color: purple;
 }
 
-#botonesDetalles {
+.botonesDetalles {
   width: 100px;
   height: 45px;
   font-size: 13px;
@@ -103,7 +109,7 @@ span.fa-layers-text {
   color: #000; */
   }  
 
-#botonesDetalles:hover {
+.botonesDetalles:hover {
   background-color: #2EDCE5;
   box-shadow: 0px 15px 20px rgba(155, 241, 240, 0.4);
   color: #fff;
@@ -116,7 +122,7 @@ span.fa-layers-text {
   height: 35px;
 }
 
-#botonesFavs{
+.botonesFavs{
   cursor: pointer;
   background-color: #fff;
   border-radius: 15px;
@@ -124,7 +130,7 @@ span.fa-layers-text {
   transition: all 0.3s ease 0s;
 }
 
-#botonesFavs:hover {
+.botonesFavs:hover {
   background-color: #ADFF2F;
   box-shadow: 0px 15px 20px rgba(155, 241, 240, 0.4);
   color: #fff;
@@ -136,7 +142,7 @@ span.fa-layers-text {
   height: 25px;
 }
 
-#botonesDelete{
+.botonesDelete{
   cursor: pointer;
   background-color: #fff;
   border-radius: 15px;
@@ -144,20 +150,11 @@ span.fa-layers-text {
   transition: all 0.3s ease 0s;
 }
 
-#botonesDelete:hover {
+.botonesDelete:hover {
   background-color: aquamarine;
   box-shadow: 0px 15px 20px rgba(155, 241, 240, 0.4);
   color: #fff;
   transform: translateY(-4px);
-}
-
-#iconoHome{
-  margin-left: 150px;
-}
-
-#containerCarrusel{
-  scrollbar-color: Fuchsia coral;
-  scrollbar-width: auto;
 }
 
 

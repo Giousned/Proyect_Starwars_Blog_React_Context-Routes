@@ -7,11 +7,10 @@ import { Context } from "../store/appContext";
 
 import { Link } from "react-router-dom";
 
+import FavoritesItems from "./FavoritesItems.jsx";
+
 
 import starWars from "../../img/starwars.png";
-import laserX from "../../img/laserX.png";
-
-
 
 
 export const Navbar = () => {
@@ -46,17 +45,8 @@ export const Navbar = () => {
                 ? <li className="dropdown-item d-flex justify-content-center"> (Empty) </li> 
                 : store.favorites.map((item, index) => {
                   return (
-                          <li key={index} className="dropdown-item d-flex justify-content-between">
-    
-                            {(item.description === "A person within the Star Wars universe") 
-                              ? <span id="textoFavorito"><Link to={"/detailsPeople/" + item.id}> {item.name} </Link> </span> 
-                              : (item.description === "A planet.") ? <span id="textoFavorito"><Link to={"/detailsPlanets/" + item.id}> {item.name} </Link> </span>
-                              : (item.description === "A vehicle") ? <span id="textoFavorito"><Link to={"/detailsVehicles/" + item.id}> {item.name} </Link> </span>
-                              : null
-                            }
-                            
-                            <button id="botonesDelete" type="button" onClick={() => actions.deleteFavorites(index)} className="btn btn-outline-danger ms-2"> <img className="iconoDelete" src={laserX} /> </button>
-                          </li>
+                    <FavoritesItems key={index} description={item.description} name={item.name} id={item.id} index={index} />
+
                         );
                   })
             }   
