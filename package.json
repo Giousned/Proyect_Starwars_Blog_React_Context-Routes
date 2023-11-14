@@ -8,7 +8,6 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "webpack-dev-server --config webpack.dev.js --host 0.0.0.0 --port 3000",
-		"build": "webpack --config webpack.prod.js",
 		"build:dev": "webpack -m -c ./webpack.config.js -c ./webpack.dev.js",
 		"deploy": "node deploy-to-github.js"
 	},
